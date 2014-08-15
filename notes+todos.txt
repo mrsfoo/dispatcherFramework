@@ -1,0 +1,5 @@
+bei SchedulerJob neue Methoden:
+- throwTimeout()
+- resetTimeout()
+
+dispatcher und dispatcher job: synchronized logging
