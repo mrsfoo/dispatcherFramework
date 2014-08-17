@@ -1,10 +1,8 @@
 package com.zwb.scheduler.util;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
-import com.zwb.scheduler.impl.Scheduler;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class MyLogger
 {
@@ -17,8 +15,7 @@ public class MyLogger
 
 	public MyLogger(Class<?> clazz)
 	{
-		logger = Logger.getLogger(clazz);
-		PropertyConfigurator.configure("config/log4j.properties");
+		logger = LogManager.getLogger(clazz.getName());
 	}
 
 	private Level mapLogLevel(LogLevel level)
@@ -49,7 +46,7 @@ public class MyLogger
 	public void log(LogLevel level, Object... messages)
 	{
 		Level log4jLevel = mapLogLevel(level);
-		if ((log4jLevel == null) || (!logger.isEnabledFor(log4jLevel)))
+		if ((log4jLevel == null) || (!logger.isEnabled(log4jLevel)))
 		{
 			return;
 		}

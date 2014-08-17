@@ -2,8 +2,6 @@ package com.zwb.scheduler.junit;
 
 import junit.framework.TestCase;
 
-import org.apache.log4j.Logger;
-
 import com.zwb.scheduler.api.IScheduler;
 import com.zwb.scheduler.api.SchedulerFactory;
 import com.zwb.scheduler.api.SchedulerJobState;
