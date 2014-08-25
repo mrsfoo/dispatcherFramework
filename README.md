@@ -17,3 +17,7 @@ add as eclipse project
       - log4j-api-2.0-beta9.jar
    b. add the folder where a logging configuration file log4j2.xml is located to the class path; in eclipse this can be done by adding the folder as source folder
    c. you can checkout logging libs and configuration from https://github.com/mrsfoo/mylog4j.git
+7. for configuration files:
+   a. checkout the project https://github.com/mrsfoo/gkConfigurations.git
+   b. set system property com.zwb.config.configuration_path to the path of the top level folder you checked out to; reboot
+

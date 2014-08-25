@@ -18,6 +18,16 @@ public class MyLogger
 		logger = LogManager.getLogger(clazz.getName());
 	}
 
+	public boolean isLogLevelEnabled(LogLevel level)
+	{
+		Level log4jLevel = mapLogLevel(level);
+		if ((log4jLevel == null) || (!logger.isEnabled(log4jLevel)))
+		{
+			return false;
+		}
+		return true;
+	}
+
 	private Level mapLogLevel(LogLevel level)
 	{
 		switch (level)
